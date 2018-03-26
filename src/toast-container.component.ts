@@ -16,6 +16,8 @@ import {Observable} from 'rxjs/Observable';
       (click)="clicked(toast)">
         <div class="toast-close-button" *ngIf="toast.config.showCloseButton" (click)="removeToast(toast)">&times;
         </div> 
+        <div class=\"toast-close-button\" *ngIf=\"toast.config.showPinButton\" (click)=\"pinToast(toast)\"><i class='fa fa-thumb-tack' aria-hidden='true' style='font-size: x-small; margin-top: 11px; margin-right: 5px'></i>\n        
+        </div>
         <div *ngIf="toast.title" class="{{toast.config.titleClass || titleClass}}">{{toast.title}}</div>
         <div [ngSwitch]="toast.config.enableHTML">
           <span *ngSwitchCase="true" class="{{toast.config.messageClass || messageClass}}" [innerHTML]="sanitizer.bypassSecurityTrustHtml(toast.message)"></span>
@@ -169,6 +171,12 @@ export class ToastContainer implements OnDestroy {
     this.toasts = this.toasts.filter((t) => {
       return t.id !== toast.id;
     });
+  }
+
+  pinToast(toast: Toast) {
+    if (toast.timeoutId) {
+        clearTimeout(toast.timeoutId);
+      } 
   }
 
   removeAllToasts() {

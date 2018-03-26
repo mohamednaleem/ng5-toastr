@@ -25,6 +25,7 @@ export declare class ToastContainer implements OnDestroy {
     onExit(): Observable<void>;
     addToast(toast: Toast): void;
     removeToast(toast: Toast): void;
+    pinToast(toast: Toast): void;
     removeAllToasts(): void;
     clicked(toast: Toast): void;
     anyToast(): boolean;

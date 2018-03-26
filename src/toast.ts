@@ -7,6 +7,7 @@ export class Toast {
     messageClass: '',
     toastLife: 3000,
     showCloseButton: false,
+    showPinButton: false,
   };
   timeoutId: any;
 

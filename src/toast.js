@@ -13,6 +13,7 @@ var Toast = (function () {
             messageClass: '',
             toastLife: 3000,
             showCloseButton: false,
+            showPinButton: false,
         };
     }
     return Toast;
