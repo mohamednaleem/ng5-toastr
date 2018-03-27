@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
-var ng2_toastr_1 = require("ng2-toastr");
+var ng5_toastr_1 = require("ng5-toastr");
 var animations_1 = require("@angular/platform-browser/animations");
 var custom_option_1 = require("./custom-option");
 var AppModule = (function () {
@@ -22,10 +22,10 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, ng2_toastr_1.ToastModule.forRoot()],
+        imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, ng5_toastr_1.ToastModule.forRoot()],
         declarations: [app_component_1.AppComponent],
         providers: [
-            { provide: ng2_toastr_1.ToastOptions, useClass: custom_option_1.CustomOption },
+            { provide: ng5_toastr_1.ToastOptions, useClass: custom_option_1.CustomOption },
         ],
         bootstrap: [app_component_1.AppComponent],
     })

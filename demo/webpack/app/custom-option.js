@@ -10,7 +10,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var ng2_toastr_1 = require("ng2-toastr");
+var ng5_toastr_1 = require("ng5-toastr");
 var CustomOption = (function (_super) {
     __extends(CustomOption, _super);
     function CustomOption() {
@@ -22,6 +22,6 @@ var CustomOption = (function (_super) {
         return _this;
     }
     return CustomOption;
-}(ng2_toastr_1.ToastOptions));
+}(ng5_toastr_1.ToastOptions));
 exports.CustomOption = CustomOption;
 //# sourceMappingURL=custom-option.js.map

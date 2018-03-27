@@ -1,4 +1,4 @@
-import { ToastOptions } from 'ng2-toastr';
+import { ToastOptions } from 'ng5_-toastr';
 export declare class CustomOption extends ToastOptions {
     animate: string;
     newestOnTop: boolean;

@@ -1,7 +1,7 @@
 import {
   Component, ViewContainerRef
 } from '@angular/core';
-import {ToastsManager} from 'ng2-toastr/ng2-toastr';
+import {ToastsManager} from 'ng5-toastr/ng5-toastr';
 
 @Component({
   selector: 'my-app',

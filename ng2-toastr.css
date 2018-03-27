@@ -31,16 +31,43 @@
     cursor: pointer;
     opacity: 0.4;
 }
-/*Additional properties for button version
- iOS requires the button element instead of an anchor tag.
- If you want the anchor version, it requires `href="#"`.*/
-button.toast-close-button {
+
+button.toast-pin-button {
     padding: 0;
     cursor: pointer;
     background: transparent;
     border: 0;
     -webkit-appearance: none;
 }
+
+.toast-pin-button {
+    position: relative;
+    right: -0.3em;
+    top: -0.3em;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    -webkit-text-shadow: 0 1px 0 #ffffff;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.8;
+}
+.toast-pin-button:hover,
+.toast-pin-button:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+button.toast-pin-button {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
 .toast-top-center {
     top: 0;
     right: 0;
@@ -148,7 +175,7 @@ button.toast-close-button {
     pointer-events: auto;
 }
 .toast-success {
-    background-color: #51A351;
+    background-color: #6EC5AB;
 }
 .toast-error {
     background-color: #BD362F;

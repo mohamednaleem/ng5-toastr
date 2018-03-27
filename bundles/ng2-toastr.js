@@ -1,4 +1,4 @@
-System.registerDynamic("ng2-toastr/src/toast-container.component", ["@angular/core", "./toast-options", "@angular/platform-browser", "rxjs/add/operator/first", "rxjs/Subject"], true, function($__require, exports, module) {
+System.registerDynamic("ng5-toastr/src/toast-container.component", ["@angular/core", "./toast-options", "@angular/platform-browser", "rxjs/add/operator/first", "rxjs/Subject"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -156,7 +156,7 @@ System.registerDynamic("ng2-toastr/src/toast-container.component", ["@angular/co
   return module.exports;
 });
 
-System.registerDynamic("ng2-toastr/src/toast", [], true, function($__require, exports, module) {
+System.registerDynamic("ng5-toastr/src/toast", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -185,7 +185,7 @@ System.registerDynamic("ng2-toastr/src/toast", [], true, function($__require, ex
   return module.exports;
 });
 
-System.registerDynamic("ng2-toastr/src/toast-manager", ["@angular/core", "./toast-container.component", "./toast-options", "./toast", "rxjs/Subject"], true, function($__require, exports, module) {
+System.registerDynamic("ng5-toastr/src/toast-manager", ["@angular/core", "./toast-container.component", "./toast-options", "./toast", "rxjs/Subject"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -333,7 +333,7 @@ System.registerDynamic("ng2-toastr/src/toast-manager", ["@angular/core", "./toas
   return module.exports;
 });
 
-System.registerDynamic("ng2-toastr/src/toast-options", ["@angular/core"], true, function($__require, exports, module) {
+System.registerDynamic("ng5-toastr/src/toast-options", ["@angular/core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -365,7 +365,7 @@ System.registerDynamic("ng2-toastr/src/toast-options", ["@angular/core"], true, 
   return module.exports;
 });
 
-System.registerDynamic("ng2-toastr/src/toast.module", ["@angular/core", "@angular/common", "./toast-container.component", "./toast-manager", "./toast-options"], true, function($__require, exports, module) {
+System.registerDynamic("ng5-toastr/src/toast.module", ["@angular/core", "@angular/common", "./toast-container.component", "./toast-manager", "./toast-options"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -404,7 +404,7 @@ System.registerDynamic("ng2-toastr/src/toast.module", ["@angular/core", "@angula
   return module.exports;
 });
 
-System.registerDynamic("ng2-toastr/ng2-toastr", ["./src/toast", "./src/toast-manager", "./src/toast-container.component", "./src/toast-options", "./src/toast.module"], true, function($__require, exports, module) {
+System.registerDynamic("ng5-toastr/ng5-toastr", ["./src/toast", "./src/toast-manager", "./src/toast-container.component", "./src/toast-options", "./src/toast.module"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -425,4 +425,4 @@ System.registerDynamic("ng2-toastr/ng2-toastr", ["./src/toast", "./src/toast-man
   return module.exports;
 });
 
-//# sourceMappingURL=ng2-toastr.js.map
+//# sourceMappingURL=ng5-toastr.js.map

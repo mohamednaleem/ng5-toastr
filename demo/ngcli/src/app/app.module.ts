@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ToastModule, ToastOptions } from 'ng2-toastr';
+import { ToastModule, ToastOptions } from 'ng5-toastr';
 import { CustomOption } from './custom-option';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 

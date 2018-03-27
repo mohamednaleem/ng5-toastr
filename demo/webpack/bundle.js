@@ -26426,7 +26426,7 @@ var toast_options_1 = __webpack_require__(7);
 exports.ToastOptions = toast_options_1.ToastOptions;
 var toast_module_1 = __webpack_require__(31);
 exports.ToastModule = toast_module_1.ToastModule;
-//# sourceMappingURL=ng2-toastr.js.map
+//# sourceMappingURL=ng5-toastr.js.map
 
 /***/ }),
 /* 11 */
@@ -29466,7 +29466,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
 var platform_browser_1 = __webpack_require__(6);
 var app_component_1 = __webpack_require__(56);
-var ng2_toastr_1 = __webpack_require__(10);
+var ng5_toastr_1 = __webpack_require__(10);
 var animations_1 = __webpack_require__(30);
 var custom_option_1 = __webpack_require__(57);
 var AppModule = (function () {
@@ -29476,10 +29476,10 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, ng2_toastr_1.ToastModule.forRoot()],
+        imports: [platform_browser_1.BrowserModule, animations_1.BrowserAnimationsModule, ng5_toastr_1.ToastModule.forRoot()],
         declarations: [app_component_1.AppComponent],
         providers: [
-            { provide: ng2_toastr_1.ToastOptions, useClass: custom_option_1.CustomOption },
+            { provide: ng5_toastr_1.ToastOptions, useClass: custom_option_1.CustomOption },
         ],
         bootstrap: [app_component_1.AppComponent],
     })
@@ -42653,7 +42653,7 @@ var Xliff = function (_Serializer) {
             var /** @type {?} */file = new Tag('file', {
                 'source-language': locale || _DEFAULT_SOURCE_LANG,
                 datatype: 'plaintext',
-                original: 'ng2.template'
+                original: 'ng5_.template'
             }, [new CR(4), body, new CR(2)]);
             var /** @type {?} */xliff = new Tag('xliff', { version: _VERSION, xmlns: _XMLNS }, [new CR(2), file, new CR()]);
             return serialize([new Declaration({ version: '1.0', encoding: 'UTF-8' }), new CR(), xliff, new CR()]);
@@ -61346,9 +61346,9 @@ var Extractor = function () {
 
             var /** @type {?} */programSymbols = extractProgramSymbols(this.staticSymbolResolver, rootFiles, this.host);
 
-            var _analyzeAndValidateNg2 = analyzeAndValidateNgModules(programSymbols, this.host, this.metadataResolver),
-                files = _analyzeAndValidateNg2.files,
-                ngModules = _analyzeAndValidateNg2.ngModules;
+            var _analyzeAndValidateNg5 = analyzeAndValidateNgModules(programSymbols, this.host, this.metadataResolver),
+                files = _analyzeAndValidateNg5.files,
+                ngModules = _analyzeAndValidateNg5.ngModules;
 
             return Promise.all(ngModules.map(function (ngModule) {
                 return _this216.metadataResolver.loadNgModuleDirectiveAndPipeMetadata(ngModule.type.reference, false);
@@ -66393,7 +66393,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(0);
-var ng2_toastr_1 = __webpack_require__(10);
+var ng5_toastr_1 = __webpack_require__(10);
 var AppComponent = (function () {
     function AppComponent(toastr, containerRef) {
         this.toastr = toastr;
@@ -66428,7 +66428,7 @@ AppComponent = __decorate([
         selector: 'my-app',
         template: "\n      <h1> Angular 2 Toastr Demo.</h1>\n      <div style=\"border: .2rem solid #f7f7f9; position: relative; margin: 1rem -1rem; padding: 10px;\">\n        <button type=\"button\" class=\"btn btn-success\" (click)=\"showSuccess()\">Success</button>\n        <button type=\"button\" class=\"btn btn-info\" (click)=\"showInfo()\">Information</button>\n        <button type=\"button\" class=\"btn btn-warning\" (click)=\"showWarning()\">Warning</button>\n        <button type=\"button\" class=\"btn btn-danger\" (click)=\"showError()\">Error</button>\n      </div>\n      <div style=\"border: .2rem solid #f7f7f9; position: relative; margin: 1rem -1rem; padding: 10px;\">\n        <button type=\"button\" class=\"btn btn-info\" (click)=\"showClickToDismiss()\">Click to Dismiss</button>\n        <button type=\"button\" class=\"btn btn-warning\" (click)=\"showCustomLife()\">8-second Toast</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"showCustomHTML()\">Custom HTML Toast</button>\n      </div>\n  "
     }),
-    __metadata("design:paramtypes", [ng2_toastr_1.ToastsManager, core_1.ViewContainerRef])
+    __metadata("design:paramtypes", [ng5_toastr_1.ToastsManager, core_1.ViewContainerRef])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 
@@ -66450,7 +66450,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var ng2_toastr_1 = __webpack_require__(10);
+var ng5_toastr_1 = __webpack_require__(10);
 var CustomOption = (function (_super) {
     __extends(CustomOption, _super);
     function CustomOption() {
@@ -66462,7 +66462,7 @@ var CustomOption = (function (_super) {
         return _this;
     }
     return CustomOption;
-}(ng2_toastr_1.ToastOptions));
+}(ng5_toastr_1.ToastOptions));
 exports.CustomOption = CustomOption;
 
 

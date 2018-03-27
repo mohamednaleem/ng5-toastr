@@ -1,7 +1,7 @@
-Angular Toaster Module (ng2-toastr)
+Angular Toaster Module (ng5-toastr)
 ===================
 
-[![](https://img.shields.io/badge/npm-v4.1.2-brightgreen.svg)](https://www.npmjs.com/package/ng2-toastr)
+[![](https://img.shields.io/badge/npm-v4.1.2-brightgreen.svg)](https://www.npmjs.com/package/ng5-toastr)
 
 The lib is inspired by [angular-toastr] (https://github.com/Foxandxss/angular-toastr), and will show bootstrap-like toasts. 
 Please update Modern Angular (v4.0.0+) latest version to avoid any unexpected issues. 
@@ -27,19 +27,19 @@ Use v1.6.0 if you are working with `angular v2.x`.
     
 ## Usage
 
-1. Install ng2-toastr using npm:
+1. Install ng5-toastr using npm:
 
-    ``` npm install ng2-toastr --save ```
+    ``` npm install ng5-toastr --save ```
 
 2. Include js and css files in html header
     
     ```
-    <link href="node_modules/ng2-toastr/bundles/ng2-toastr.min.css" rel="stylesheet" />
-    <script src="node_modules/ng2-toastr/bundles/ng2-toastr.min.js"></script>
+    <link href="node_modules/ng5-toastr/bundles/ng5-toastr.min.css" rel="stylesheet" />
+    <script src="node_modules/ng5-toastr/bundles/ng5-toastr.min.js"></script>
     
     ```
     
-    NOTE: If you are using angular-cli you do not need to include 'node_modules/ng2-toastr/bundles/ng2-toastr.min.js', since adding 'import {ToastModule} from 'ng2-toastr/ng2-toastr';' to your module file (below) will allow it to be autoloaded.
+    NOTE: If you are using angular-cli you do not need to include 'node_modules/ng5-toastr/bundles/ng5-toastr.min.js', since adding 'import {ToastModule} from 'ng5-toastr/ng5-toastr';' to your module file (below) will allow it to be autoloaded.
 
 3. Add ToastModule into your AppModule class. `app.module.ts` would look like this:
 
@@ -48,7 +48,7 @@ Use v1.6.0 if you are working with `angular v2.x`.
         import {NgModule} from '@angular/core';
         import {BrowserModule} from '@angular/platform-browser';
         import {AppComponent} from './app.component';
-        import {ToastModule} from 'ng2-toastr/ng2-toastr';
+        import {ToastModule} from 'ng5-toastr/ng5-toastr';
         
         @NgModule({
           imports: [BrowserModule, ToastModule.forRoot()],
@@ -63,7 +63,7 @@ Use v1.6.0 if you are working with `angular v2.x`.
 4. Inject 'ToastsManager' class in your component class.
 
     ```typescript
-        import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+        import { ToastsManager } from 'ng5-toastr/ng5-toastr';
         
         @Component({
           selector: 'awesome-component',
@@ -117,6 +117,9 @@ Determines whether new toast should show up on top of previous toast Defaults to
 ##### showCloseButton: (boolean)
 Determines whether toast should include 'x' close button. Defaults to false.
 
+##### showPinButton: (boolean)
+Determines whether toast should not be dismiss pin button. Defaults to false.
+
 ##### maxShown: (number)
 Determines maximum number of toasts can be shown on the page in the same time. Defaults to 5.
 
@@ -150,7 +153,7 @@ Allow input of message to be HTML. Default to false.
 Use dependency inject for custom configurations. You can either inject into `app.module.ts` or any component class.
    
     // custom-option.ts
-    import {ToastOptions} from 'ng2-toastr';
+    import {ToastOptions} from 'ng5-toastr';
     
     export class CustomOption extends ToastOptions {
       animate = 'flyRight'; // you can override any options available

@@ -1,5 +1,5 @@
 import { ViewContainerRef } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager } from 'ng5_-toastr/ng5_-toastr';
 export declare class AppComponent {
     private toastr;
     constructor(toastr: ToastsManager, containerRef: ViewContainerRef);

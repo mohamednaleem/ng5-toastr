@@ -12,11 +12,11 @@ import {Observable} from 'rxjs/Observable';
   selector: 'toast-container',
   template: `
     <div #toastContainer id="toast-container" [style.position]="position" class="{{positionClass}}">
-      <div *ngFor="let toast of toasts" [@inOut]="animate" (@inOut.done)="onAnimationEnd($event)" class="toast toast-{{toast.type}}" 
+      <div *ngFor="let toast of toasts" [@inOut]="animate" (@inOut.done)="onAnimationEnd($event)" class="toast toast-{{toast.type}}"
       (click)="clicked(toast)">
         <div class="toast-close-button" *ngIf="toast.config.showCloseButton" (click)="removeToast(toast)">&times;
         </div>
-        <div class="toast-close-button" *ngIf="toast.config.showPinButton" (click)="pinToast(toast)"><i class='fa fa-thumb-tack' aria-hidden='true' style='font-size: x-small; margin-top: 11px; margin-right: 5px'></i>
+        <div class="toast-pin-button" *ngIf="toast.config.showPinButton" (click)="pinToast(toast)"><i class='fa fa-thumb-tack' aria-hidden='true' style='font-size: x-small; margin-top: 11px; margin-right: 5px'></i>
         </div>
         <div *ngIf="toast.title" class="{{toast.config.titleClass || titleClass}}">{{toast.title}}</div>
         <div [ngSwitch]="toast.config.enableHTML">
@@ -176,7 +176,7 @@ export class ToastContainer implements OnDestroy {
   pinToast(toast: Toast) {
     if (toast.timeoutId) {
         clearTimeout(toast.timeoutId);
-      } 
+      }
   }
 
   removeAllToasts() {
