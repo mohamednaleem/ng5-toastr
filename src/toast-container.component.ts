@@ -15,14 +15,14 @@ import {Observable} from 'rxjs/Observable';
       <div *ngFor="let toast of toasts" [@inOut]="animate" (@inOut.done)="onAnimationEnd($event)" class="toast toast-{{toast.type}}" 
       (click)="clicked(toast)">
         <div class="toast-close-button" *ngIf="toast.config.showCloseButton" (click)="removeToast(toast)">&times;
-        </div> 
-        <div class=\"toast-close-button\" *ngIf=\"toast.config.showPinButton\" (click)=\"pinToast(toast)\"><i class='fa fa-thumb-tack' aria-hidden='true' style='font-size: x-small; margin-top: 11px; margin-right: 5px'></i>\n        
+        </div>
+        <div class="toast-close-button" *ngIf="toast.config.showPinButton" (click)="pinToast(toast)"><i class='fa fa-thumb-tack' aria-hidden='true' style='font-size: x-small; margin-top: 11px; margin-right: 5px'></i>
         </div>
         <div *ngIf="toast.title" class="{{toast.config.titleClass || titleClass}}">{{toast.title}}</div>
         <div [ngSwitch]="toast.config.enableHTML">
           <span *ngSwitchCase="true" class="{{toast.config.messageClass || messageClass}}" [innerHTML]="sanitizer.bypassSecurityTrustHtml(toast.message)"></span>
           <span *ngSwitchDefault class="{{toast.config.messageClass || messageClass}}">{{toast.message}}</span>
-        </div>             
+        </div>
       </div>
     </div>
     `,
