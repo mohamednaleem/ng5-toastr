@@ -7,7 +7,7 @@ The lib is inspired by [angular-toastr] (https://github.com/Foxandxss/angular-to
 Please update Modern Angular (v4.0.0+) latest version to avoid any unexpected issues. 
 We jumped version from v1.x to v4.x in order to match Angular version.
 
-NOTE 1: In order to use animation, please include Animation Module from `angular v4.x` to your project:
+NOTE 1: In order to use animation, please include Animation Module from `angular v5.x` to your project:
 
 ```
     import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -20,7 +20,7 @@ NOTE 1: In order to use animation, please include Animation Module from `angular
     }
 ```
 
-![Examples](toastr-examples.jpg?raw=true "Bootstrap Toasts")
+<!-- ![Examples](toastr-examples.jpg?raw=true "Bootstrap Toasts") -->
 
 NOTE 2: Version 4.0.x and above works with Angular v4 (Tested with Angular v4.0.0 and Angular-Cli v1.0.0).
 Use v1.6.0 if you are working with `angular v2.x`.      
@@ -159,6 +159,7 @@ Use dependency inject for custom configurations. You can either inject into `app
       animate = 'flyRight'; // you can override any options available
       newestOnTop = false;
       showCloseButton = true;
+      showPinButton = true;
     }
     
     // app.module.ts
